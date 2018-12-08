@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingTop="10dp"
+        android:text="🝔 🄼🄸🄽🄸 🅂🄾🄰🄿 🝔"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor=" #899cf1"
+        android:background="#f9dbcd"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="225dp"
+        android:src="@drawable/soap_plain"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginLeft="75"
+            android:text= "『-』 "/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80"
+            android:textSize="20dp"
+            android:text="『+』"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
