@@ -1,49 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FDF7EF">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:paddingTop="10dp"
-        android:text="🝔 🄼🄸🄽🄸 🅂🄾🄰🄿 🝔"
-        android:textSize="30sp"
+        android:layout_height="100dp"
+        android:background="#f9dbcd"
+        android:paddingTop="20dp"
+        android:text="░S░o░a░p░S░h░o░p░"
         android:textAlignment="center"
         android:textColor=" #899cf1"
-        android:background="#f9dbcd"/>
+        android:textSize="35dp" />
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="225dp"
-        android:src="@drawable/soap_plain"/>
+        android:layout_height="250dp"
+        android:paddingTop="20dp"
+        android:src="@drawable/soap_plain" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text= "Plain Milk Soap ($5)"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:paddingBottom="30dp"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:textAlignment="center">
+        android:orientation="horizontal">
 
         <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="72dp"
+            android:text="『-』"
+            android:textSize="20dp"
+            android:background="#899cf1"
+            android:onClick="decrease"/>
+
+
+        <TextView
+            android:id="@+id/quantity_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_marginLeft="75"
-            android:text= "『-』 "/>
+            android:paddingLeft="10dp"
+            android:text="𝚀𝚞𝚊𝚗𝚝𝚒𝚝𝚢"
+            android:paddingBottom="30dp"
+            android:textAlignment="center"
+            android:textSize="26dp" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80"
+            android:layout_marginLeft="8dp"
+            android:text="『+』"
             android:textSize="20dp"
-            android:text="『+』"/>
+            android:background="#899cf1"
+            android:onClick="increase"/>
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
+        <CheckBox
+            android:id= "@+id/lavender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌿🌿 𝕃𝕒𝕧𝕖𝕟𝕕𝕖𝕣 ($5) 🌿🌿"
+            android:textSize="20sp"/>
+        <CheckBox
+            android:id="@+id/peppermint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌱 ℙ𝕖𝕡𝕡𝕖𝕣𝕞𝕚𝕟𝕥 ($2)🌱"
+            android:textSize="20sp"/>
+        <CheckBox
+            android:id="@+id/rose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌹 ℝ𝕠𝕤𝕖 ℙ𝕖𝕥𝕒𝕝𝕤 ($7)🌹"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:hint="Name"
+        android:textColor=" #899cf1"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:text="Total Price: "
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:paddingTop="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="𝙾𝚛𝚍𝚎𝚛 𝚗𝚘𝚠"
+        android:textSize="20dp"
+        android:onClick="submitOrder"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="𝙳𝚎𝚜𝚌𝚛𝚒𝚙𝚝𝚒𝚘𝚗:"
+        android:paddingTop="20dp"
+        android:textAlignment="center"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:text="𝕋𝕙𝕚𝕤 𝕚𝕤 𝕪𝕠𝕦𝕣 𝕧𝕖𝕣𝕪 𝕠𝕨𝕟 𝕔𝕦𝕤𝕥𝕠𝕞 𝕤𝕠𝕒𝕡 𝕓𝕒𝕣!"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="𝙻𝚊𝚟𝚎𝚗𝚍𝚎𝚛: 𝕤𝕠𝕠𝕥𝕙𝕚𝕟𝕘, 𝕔𝕒𝕝𝕞𝕚𝕟𝕘, 𝕙𝕖𝕒𝕝𝕚𝕟𝕘."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="𝙿𝚎𝚙𝚙𝚎𝚛𝚖𝚒𝚗𝚝: 𝕣𝕖𝕕𝕦𝕔𝕖 𝕤𝕥𝕣𝕖𝕤𝕤, 𝕥𝕣𝕖𝕒𝕥𝕤 𝕙𝕖𝕒𝕕𝕒𝕔𝕙𝕖𝕤."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="𝚁𝚘𝚜𝚎 𝙿𝚎𝚝𝚊𝚕𝚜: 𝕕𝕖𝕔𝕣𝕖𝕒𝕤𝕖𝕤 𝕕𝕖𝕡𝕣𝕖𝕤𝕤𝕚𝕠𝕟, 𝕙𝕒𝕤 𝕞𝕒𝕟𝕪 𝕒𝕟𝕥𝕚𝕠𝕩𝕚𝕕𝕒𝕟𝕥𝕤."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
 
 </LinearLayout>
+
+</ScrollView>
+
